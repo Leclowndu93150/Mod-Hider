@@ -11,18 +11,18 @@ import java.util.Map;
 public class MixinLoader implements IEarlyMixinLoader, IFMLLoadingPlugin {
     @Override
     public String[] getASMTransformerClass() {
-        return new String[0];
+        return null;
     }
 
     @Override
     public String getModContainerClass() {
-        return "";
+        return null;
     }
 
     @Nullable
     @Override
     public String getSetupClass() {
-        return "";
+        return null;
     }
 
     @Override
@@ -32,12 +32,12 @@ public class MixinLoader implements IEarlyMixinLoader, IFMLLoadingPlugin {
 
     @Override
     public String getAccessTransformerClass() {
-        return "";
+        return null;
     }
 
     @Override
     public List<String> getMixinConfigs()
     {
-        return Collections.singletonList("mixins.modid.json");
+        return Collections.singletonList("mixins.modhider.json");
     }
 }

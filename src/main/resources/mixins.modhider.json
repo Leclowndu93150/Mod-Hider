@@ -1,13 +1,12 @@
 {
-	"package": "com.example.modid.mixin",
+	"package": "com.leclowndu93150.modhider.mixin",
 	"required": true,
 	"refmap": "${mixin_refmap}",
 	"target": "@env(DEFAULT)",
 	"minVersion": "0.8.5",
 	"compatibilityLevel": "JAVA_8",
 	"mixins": [
-      "com.leclowndu93150.modhider.mixin.ModListMixin",
-      "com.leclowndu93150.modhider.mixin.SplashScreenMixin"
+		"ModListMixin"
 	],
 	"server": [],
 	"client": []
