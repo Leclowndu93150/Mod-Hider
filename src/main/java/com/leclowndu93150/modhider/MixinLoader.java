@@ -1,4 +1,4 @@
-package com.example.modid;
+package com.leclowndu93150.modhider;
 
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
 import zone.rong.mixinbooter.IEarlyMixinLoader;

@@ -1,6 +1,6 @@
-package com.example.modid.mixin;
+package com.leclowndu93150.modhider.mixin;
 
-import com.example.modid.ExampleMod;
+import com.leclowndu93150.modhider.ExampleMod;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.common.network.ByteBufUtils;

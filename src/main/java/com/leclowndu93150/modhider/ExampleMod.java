@@ -1,4 +1,4 @@
-package com.example.modid;
+package com.leclowndu93150.modhider;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-@Mod(modid = Tags.MOD_ID, name = Tags.MOD_NAME, version = Tags.VERSION)
+@Mod(modid = "modid", name = "Mod Hider", version = "1.0")
 public class ExampleMod {
 
     private static final String CONFIG_FILENAME = "hiddenmods.txt";

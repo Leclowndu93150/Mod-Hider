@@ -1,4 +1,4 @@
-package com.example.modid.mixin;
+package com.leclowndu93150.modhider.mixin;
 
 import net.minecraft.client.gui.GuiMainMenu;
 import org.spongepowered.asm.mixin.Mixin;

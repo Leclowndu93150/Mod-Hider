@@ -6,8 +6,8 @@
 	"minVersion": "0.8.5",
 	"compatibilityLevel": "JAVA_8",
 	"mixins": [
-		"ModListMixin",
-		"SplashScreenMixin"
+      "com.leclowndu93150.modhider.mixin.ModListMixin",
+      "com.leclowndu93150.modhider.mixin.SplashScreenMixin"
 	],
 	"server": [],
 	"client": []
