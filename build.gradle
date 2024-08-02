@@ -14,6 +14,7 @@ plugins {
     id 'com.matthewprenger.cursegradle' version '1.4.0' apply false
     id 'com.modrinth.minotaur' version '2.+' apply false
     id 'org.jetbrains.changelog' version '2.2.0'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
 }
 
 apply from: 'gradle/scripts/helpers.gradle'
@@ -190,6 +191,9 @@ processResources {
 }
 
 jar {
+
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
     manifest {
         def attribute_map = [:]
         if (propertyBool('is_coremod')) {
