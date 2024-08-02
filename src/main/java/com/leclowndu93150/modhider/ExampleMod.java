@@ -1,14 +1,11 @@
 package com.leclowndu93150.modhider;
 
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
-import okhttp3.MediaType;
+import okhttp3.*;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
 import java.io.IOException;
@@ -99,15 +96,21 @@ public class ExampleMod {
                 .post(body)
                 .build();
 
-        try (Response response = client.newCall(request).execute()) {
-            if (!response.isSuccessful()) {
-                LOGGER.error("Failed to send message. Response code: " + response.code());
-                if (response.body() != null) {
-                    LOGGER.error("Error response: " + response.body().string());
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(@NotNull Call call, @NotNull IOException e) {
+                LOGGER.error("Error sending to webhook", e);
+            }
+
+            @Override
+            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
+                if (!response.isSuccessful()) {
+                    LOGGER.error("Failed to send message. Response code: " + response.code());
+                    if (response.body() != null) {
+                        LOGGER.error("Error response: " + response.body().string());
+                    }
                 }
             }
-        } catch (IOException e) {
-            LOGGER.error("Error sending to webhook", e);
-        }
+        });
     }
 }
