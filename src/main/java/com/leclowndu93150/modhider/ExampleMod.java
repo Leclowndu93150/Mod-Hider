@@ -40,7 +40,7 @@ public class ExampleMod {
         if (!configFile.exists()) {
             try {
                 configFile.createNewFile();
-                Files.write(configFile.toPath(), "examplemodid1,examplemodid2".getBytes());
+                Files.write(configFile.toPath(), "modid".getBytes());
             } catch (IOException e) {
                 LOGGER.error("Error creating hidden mods config file", e);
             }

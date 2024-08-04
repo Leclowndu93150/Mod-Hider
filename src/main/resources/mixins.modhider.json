@@ -10,6 +10,7 @@
   ],
   "server": [],
   "client": [
-    "ChatGuiMixin"
-    ]
+    "ChatGuiMixin",
+    "RenderManagerMixin"
+  ]
 }
